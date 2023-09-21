@@ -1,0 +1,283 @@
+@import "_Variables.scss";
+@import "_Mixin.scss";
+
+// *,
+// *::before,
+// *::after {
+// 	box-sizing: border-box;
+// }
+body {
+	color: $Grey;
+	font-family: $font-family;
+	margin: 0px;
+	width: 23.4375rem;
+}
+.fa-solid {
+	color: $Grey;
+}
+// Header
+header {
+	display: flex;
+	flex-direction: column;
+	height: 3.9375rem;
+}
+.header-logo {
+	width: 12.3125rem;
+	height: 2.25rem;
+	padding: 0.875rem 5.5625rem 0.8125rem 5.5625rem;
+	background: $White;
+
+	/* Shadow/Badge */
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.logo_header {
+	width: 10.125rem;
+	height: 2.75rem;
+	padding-left: 1rem;
+	padding-right: 1.19rem;
+}
+
+.section-location {
+	display: flex;
+	flex-direction: row;
+	background-color: $Grey2;
+	height: 3.125rem;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	@include font-size-button;
+}
+
+.section-location .icon-location {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $Grey;
+	height: 1rem;
+	width: 0.75rem;
+	padding-right: 1.06rem;
+}
+// section-reservation
+.section-reservation {
+	display: flex;
+	flex-direction: column;
+	// align-items: center;
+	// justify-content: center;
+	background-color: #f6f6f6;
+	padding-top: 2.44rem;
+}
+.section-reservation .section-title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	width: 17.1875rem;
+	height: 4.25rem;
+	padding: 0 2.62rem 0 3.63rem;
+}
+.section-reservation .section-title h2 {
+	color: black;
+	@include font-size-section-title;
+	text-align: center;
+	margin: 0;
+}
+.section-reservation p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include font-size-section-title-p;
+	padding: 0 2.12rem 0 1.63rem;
+	text-align: center;
+}
+.section-reservation .section-bouton {
+	padding: 1.69rem 4.69rem 3.56rem 5.12rem;
+}
+.section-reservation button {
+	@include font-size-button;
+	padding: 1.17rem 0.81rem;
+	width: 13.625rem;
+	height: 3.125rem;
+	border: none;
+	border-radius: 1.5625rem;
+	background: var(
+		--Button-Gradient,
+		linear-gradient(193deg, #9356dc -11.44%, #ff79da 123.93%)
+	);
+	color: white;
+	/* Shadow/Button */
+	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.section-fonctionnement {
+	display: flex;
+	flex-direction: column;
+	height: 27.5rem;
+}
+.section-fonctionnement .section-title {
+	width: 17.1875rem;
+	height: 1.9375rem;
+	padding: 3rem 5rem 1.62rem 1.25rem;
+}
+.section-fonctionnement .section-title h2 {
+	color: black;
+	@include font-size-section-title;
+	margin: 0;
+}
+
+.section-fonctionnement .section-fonctionnement-etape {
+	margin: 0 2.03rem 4.25rem 1.25rem;
+}
+
+.section-fonctionnement .section-fonctionnement-etape .section-bouton {
+	@include font-size-button-svg;
+}
+
+.section-bouton {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+}
+
+button svg {
+	margin: 1.53rem 1.69rem 1.75rem 2.09rem;
+}
+
+.badge {
+	position: absolute;
+	left: -12px;
+	top: 23px;
+}
+
+.section-fonctionnement .section-fonctionnement-etape .section-bouton button {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	@include font-size-button;
+	border: none;
+	width: 20.15538rem;
+	height: 4.52369rem;
+	margin-bottom: 1.56rem;
+	border-radius: 1.25rem;
+	background: var(--Background, #f6f6f6);
+	// /* Shadow/Instructions */
+	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.section-restaurants {
+	background: var(--Background, #f6f6f6);
+}
+
+.section-restaurants-cards {
+	padding: 0 1.12rem 0 1.06rem;
+}
+
+.section-restaurants .section-title {
+	width: 17.1875rem;
+	height: 4.25rem;
+	padding: 3rem 5rem 0rem 1.25rem;
+	// 0 au lieu de 1.62rem
+}
+.section-restaurants .section-title h2 {
+	color: black;
+	@include font-size-section-title;
+	margin: 0;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+.card {
+	width: 21.25rem;
+	height: 15.6875rem;
+	margin-bottom: 1.12rem;
+	flex-shrink: 0;
+	border-radius: 0.9375rem;
+	background: #fff;
+	/* Shadow/Card */
+	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.card-Detail {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 0.81rem;
+}
+.card-left {
+	display: flex;
+	flex-direction: column;
+}
+.card-rating {
+	display: flex;
+	flex-direction: row;
+	// justify-content: flex-end;
+	align-items: center;
+	padding-right: 1.56rem;
+}
+.card img {
+	object-fit: cover;
+}
+.section-restaurants-cards h3 {
+	margin: 0;
+	padding-top: 1.25rem;
+	width: 16.6875rem;
+	height: 1.25rem;
+	@include font-size-section-title-h3;
+}
+.section-restaurants-cards p {
+	padding-top: 0.31rem;
+	margin: 0;
+	width: 15.4375rem;
+	height: 1.5rem;
+	@include font-size-section-card-p;
+}
+// .card-title {
+// 	font-size: 1rem;
+// }
+// .section-restaurants-cards {
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// }
+
+.section-restaurants-cards img {
+	width: 21.25rem;
+	height: 9.4375rem;
+	align-self: stretch;
+	border-top-left-radius: 0.9375rem;
+	border-top-right-radius: 0.9375rem;
+}
+
+// .section-restaurants-cards .card-content {
+// 	padding: 0 0.938rem;
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: space-between;
+// 	box-sizing: border-box;
+// }
+
+// .section-restaurants-cards .card-title {
+// 	margin-top: 0.625rem;
+// 	margin-bottom: 0.25rem;
+// }
+
+// .section-restaurants-cards .card-subtitle {
+// 	margin: 0;
+// }
+
+// footer {
+// 	display: flex;
+// 	background: $Grey;
+// 	width: 23.4375rem;
+// 	padding: 1.375rem 1.5625rem;
+// 	flex-direction: column;
+// 	align-items: flex-start;
+// 	gap: 1rem;
+// }
+// .footer-logo {
+// 	display: flex;
+// 	width: 8.6875rem;
+// 	height: 1.6875rem;
+// 	padding-right: 0px;
+// }
