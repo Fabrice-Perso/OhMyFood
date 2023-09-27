@@ -1,0 +1,143 @@
+@import "../_variables.scss";
+@import "../_mixin.scss";
+
+// *////////////////////////  Header ///////////////////////////////////
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 3.9375rem;
+	/* Shadow/Badge */
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+	padding-right: 5.56rem;
+}
+.header-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 2.25rem;
+	background: $White;
+}
+
+.logo_header {
+	width: 10.125rem;
+	height: 2.75rem;
+	padding-left: 1rem;
+	padding-right: 1.19rem;
+}
+
+.header-back {
+	margin-right: 2.62rem;
+}
+
+// *////////////////////////  Logo Menu  ///////////////////////////////////
+.logo-menu {
+	height: 17.18rem;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	position: relative;
+	z-index: 1;
+}
+
+.logo-menu img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+// *////////////////////////  Section Menu  ///////////////////////////////////
+.section-menu {
+	background-color: #f6f6f6;
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	position: relative;
+	z-index: 2; /* Pour être au-dessus de la div logo-menu */
+	padding: 5px 10px;
+	margin-top: -25px;
+}
+
+.section-title-menu {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 1.6875rem;
+	padding-top: 20px;
+	margin-bottom: 1.5rem;
+}
+
+.section-title-menu h1 {
+	color: var(--Black, #101010);
+	font-family: Shrikhand;
+	font-size: 1.75rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.section-title-menu .card-rating {
+	padding-left: 30px;
+}
+
+// *//////////////////////// Section Menu  ///////////////////////////////////
+.section-menu-choixcontenu {
+	margin-bottom: 1.5rem;
+}
+.section-menu-choixcontenu h2 {
+	color: #000;
+	font-family: Roboto;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	text-transform: uppercase;
+}
+.bordered-text {
+	border-bottom: 2px solid #99e2d0;
+}
+
+.section-contenu {
+	display: flex;
+	flex-direction: column;
+	height: 2.52369rem;
+	border-radius: 1.25rem;
+	background: white;
+	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+	margin-bottom: 1.56rem;
+	padding: 0.94rem;
+}
+
+.section-contenu-title h3 {
+	color: #000;
+	font-family: Roboto;
+	font-size: 1rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	margin: 0;
+	text-align: left;
+}
+
+.section-contenu-info p span {
+	float: right;
+	font-weight: bold;
+}
+
+.section-contenu-info p {
+	margin: 0;
+	overflow: hidden;
+	color: #000;
+	font-family: Roboto;
+	font-size: 0.94019rem;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+}
+
+.section-menu .section-bouton {
+	padding: 0rem 4.69rem 1.56rem 5.12rem;
+}
