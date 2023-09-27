@@ -22,6 +22,9 @@ a {
 }
 
 .section-bouton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding: 1.69rem 4.69rem 3.56rem 5.12rem;
 }
 button {
