@@ -36,6 +36,8 @@ body {
 	100% {
 		background-color: transparent;
 		z-index: auto;
+		opacity: 0;
+		display: none;
 	}
 }
 
@@ -44,8 +46,8 @@ body {
 	border: 8px solid #3498db; /* Couleur de la bordure du loader */
 	border-top: 8px solid transparent; /* Bordure supérieure transparente */
 	border-radius: 50%;
-	width: 15px;
-	height: 15px;
+	width: 30px;
+	height: 30px;
 	animation: spin 2s linear infinite, fadeOut 1s ease-in-out 3s forwards; /* Animation de rotation et de disparition */
 }
 
