@@ -12,6 +12,72 @@ body {
 	margin: 0px;
 }
 
+/* Styles du loader container */
+// body {
+// 	// transition: opacity 0.5s ease-in-out; /* Transition de l'opacité */
+// }
+
+.loader-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999; /* Assurez-vous que le loader s'affiche au-dessus de tout */
+	opacity: 1; /* Opacité initiale */
+	animation: fadeInOut 3s ease-in-out 1s forwards; /* Animation d'apparition/disparition */
+}
+
+/* Style du loader */
+.loader {
+	border: 8px solid #3498db; /* Couleur de la bordure du loader */
+	border-top: 8px solid transparent; /* Bordure supérieure transparente */
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	animation: spin 2s linear infinite, fadeOut 1s ease-in-out 3s forwards; /* Animation de rotation et de disparition */
+}
+
+/* Animation de rotation du loader */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Animation de disparition du loader */
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+/* Animation d'apparition/disparition du loader */
+@keyframes fadeInOut {
+	0%,
+	100% {
+		opacity: 1;
+	} /* Opacité maximale au début et à la fin */
+	50% {
+		opacity: 0;
+	} /* Opacité minimale au milieu (disparition) */
+}
+
+/* Appliquer une opacité réduite à la page lorsque le loader est visible */
+// body.loader-visible {
+// 	opacity: 0.5;
+// }
+
 .fa-solid {
 	color: #9356dc;
 }
@@ -34,10 +100,17 @@ button {
 	height: 3.125rem;
 	border: none;
 	border-radius: 1.5625rem;
+	transition-duration: 0.4s;
 	background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
 	color: white;
 	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+	background-color: #9356dc;
 	cursor: pointer;
+}
+
+button:hover {
+	background: linear-gradient(0deg, #ff79da 0%, #9356dc 100%);
+	background-color: #ff79da;
 }
 
 // *////////////////////////  Header
@@ -247,7 +320,22 @@ header {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	padding-right: 1.56rem;
+	position: relative;
+}
+
+.section-restaurants-cards .card-detail .card-rating i {
+	position: absolute; /* Position absolue pour les balises <i> */
+	top: 0; /* Ajustez la valeur pour la position verticale */
+	left: -2.56rem; /* Ajustez la valeur pour la position horizontale */
+	transition: left 0.4s;
+}
+
+.section-restaurants-cards .card-detail .card-rating .fa-solid {
+	display: none; /* Par défaut, masquez la balise .fa-solid */
+}
+
+.section-restaurants-cards .card-detail .card-rating i:hover + .fa-solid {
+	display: block; /* Lorsque .card-rating est survolée, affichez .fa-solid */
 }
 
 .section-restaurants-cards h3 {
