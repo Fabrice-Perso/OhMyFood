@@ -80,7 +80,27 @@ header {
 }
 
 .section-title-menu .card-rating {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
 	padding-left: 30px;
+}
+
+.section-title-menu .card-rating i {
+	position: absolute; /* Position absolue pour les balises <i> */
+	top: 0; /* Ajustez la valeur pour la position verticale */
+	left: 1rem; /* Ajustez la valeur pour la position horizontale */
+	transition: left 0.2s;
+	cursor: pointer;
+}
+
+.section-title-menu .card-rating .fa-solid {
+	display: none; /* Par défaut, masquez la balise .fa-solid */
+}
+
+.section-title-menu .card-rating i:hover + .fa-solid {
+	display: block; /* Lorsque .card-rating est survolée, affichez .fa-solid */
 }
 
 // *//////////////////////// Section Menu  ///////////////////////////////////

@@ -124,93 +124,6 @@ header {
 	}
 }
 
-// Main content styles
-// *//////////////////////// section-location
-.section__location {
-	display: flex;
-	flex-direction: row;
-	background-color: $color-grey2;
-	height: 3.125rem;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
-	@include font-size-button;
-
-	.icon__location {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: $color-grey;
-		height: 1rem;
-		width: 0.75rem;
-		padding-right: 1.06rem;
-	}
-}
-// *//////////////////////// section__reservation
-.section__reservation {
-	display: flex;
-	flex-direction: column;
-	background-color: $color-reservation;
-	padding-top: 2.44rem;
-
-	.section__title {
-		@include flex-position;
-		height: 4.25rem;
-		padding: 0 2.62rem 0 3.63rem;
-	}
-	p {
-		@include flex-position;
-		@include font-size-section-title-p;
-		padding: 0 2.12rem 0 1.63rem;
-	}
-}
-// *//////////////////////// section-fonctionnement
-.section__fonctionnement {
-	display: flex;
-	flex-direction: column;
-	height: 27.5rem;
-
-	.section__title {
-		padding: 3rem 5rem 1.62rem 1.25rem;
-
-		h1 {
-			@include font-size-section-title;
-		}
-	}
-	.section__fonctionnement__etape {
-		background-color: $color-white;
-	}
-	.fonctionnement__etape {
-		display: flex;
-		align-items: center;
-		height: 4.52369rem;
-		border-radius: 1.25rem;
-		background: $color-reservation;
-		box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-		margin-left: 1.25rem;
-		margin-right: 1.25rem;
-		margin-bottom: 1.56rem;
-
-		span {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 50%;
-			width: 1.5rem;
-			height: 1.5rem;
-			background-color: $color-primary;
-			color: $color-white;
-			@include span-style;
-			margin-left: -10px;
-		}
-		img {
-			margin-left: 2.09rem;
-		}
-		h2 {
-			@include font-size-section-etape-h2;
-		}
-	}
-}
 // *//////////////////////// section-restaurants
 .section__restaurants {
 	background: $color-reservation;
@@ -300,7 +213,6 @@ header {
 						position: absolute; /* Position absolue pour les balises <i> */
 						top: 0; /* Ajustez la valeur pour la position verticale */
 						left: -2.56rem; /* Ajustez la valeur pour la position horizontale */
-						font-size: 1.5rem;
 					}
 
 					.fa-solid {
@@ -308,7 +220,7 @@ header {
 						color: transparent;
 						background-clip: text;
 						-webkit-background-clip: text;
-						background-image: $background-gradient;
+						background: $background-gradient;
 						transition: all 0.4s ease-in-out;
 						&:hover {
 							opacity: 1;

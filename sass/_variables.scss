@@ -1,12 +1,33 @@
 /* Colors */
-// $color6: #9356dc;
-// $color5: #003a68;
-// $color4: #89c8fa;
-// $color3: #008766;
-// $color2: #99e2d0;
-// $color1: #fcc0ce;
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-grey: #353535;
+$color-grey2: #eaeaea;
+$color-grey3: #999;
+$color-white: #fff;
+$color-black: #000;
+$color-reservation: #f6f6f6;
+$background-badge: #99e2d0;
+$color-badge: #008766;
+// Définition de variables pour les polices
+$font-family: "Roboto", sans-serif;
+$font-shrikhand: "Shrikhand", cursive;
 
-$Grey: #353535;
-$Grey2: #eaeaea;
-$White: #fff;
-$font-family: Roboto;
+// $Grey: #353535;
+// $Grey2: #eaeaea;
+// $White: #fff;
+// $Gradient-principal: #9356dc;
+// $Gradient-secondaire: #ff79da;
+// $font-family: Roboto;
+
+$background-gradient: linear-gradient(
+	0deg,
+	$color-primary 0%,
+	$color-secondary 100%
+);
+$background-gradient-hover: linear-gradient(
+	0deg,
+	$color-secondary 0%,
+	$color-primary 100%
+);
+$background-transparent: rgba(255, 255, 255, 0.9);
