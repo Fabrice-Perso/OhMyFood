@@ -65,12 +65,68 @@
 			}
 		}
 	}
+	.menu__contenu__entree {
+		// Ajoutez ces styles pour l'animation d'apparition
+		animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+		animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
+		.button__choixcontenu :nth-child(2) {
+			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
+			animation-delay: 0.5s;
+		}
+		.button__choixcontenu :nth-child(3) {
+			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
+			animation-delay: 1s;
+		}
+	}
+	.menu__contenu__plat {
+		// Ajoutez ces styles pour l'animation d'apparition
+		animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+		animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
+		animation-delay: 0.5s;
+		.button__choixcontenu :nth-child(2) {
+			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
+			animation-delay: 0.5s;
+		}
+		.button__choixcontenu :nth-child(3) {
+			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
+			animation-delay: 1s;
+		}
+	}
+	.menu__contenu__dessert {
+		// Ajoutez ces styles pour l'animation d'apparition
+		animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+		animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
+		animation-delay: 1s;
+		.button__choixcontenu :nth-child(2) {
+			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
+			animation-delay: 0.5s;
+		}
+		.button__choixcontenu :nth-child(3) {
+			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
+			animation-delay: 1s;
+		}
+	}
+	.section__bouton {
+		// Ajoutez ces styles pour l'animation d'apparition
+		animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+		animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
+		animation-delay: 2s;
+	}
 
-	.menu__contenu_entree {
+	.menu__contenu__entree,
+	.menu__contenu__plat,
+	.menu__contenu__dessert {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
 		gap: 12px;
+
 		h2 {
 			color: #000;
 			font-family: Roboto;
