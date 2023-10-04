@@ -1,56 +1,38 @@
 @use "_Variables.scss" as *;
 
 @mixin font-size-button {
-	font-family: $font-family;
 	font-size: 1rem;
-	font-style: normal;
 	font-weight: 500;
-	line-height: normal;
 }
 
 @mixin font-size-section__title__choixcontenu {
-	font-family: $font-family;
 	font-size: 1.5rem;
-	font-style: normal;
 	font-weight: 700;
-	line-height: normal;
 	color: $color-black;
 	margin: 0;
 }
 
 @mixin font-size-section__title__choixcontenu-p {
-	font-family: $font-family;
 	font-size: 1.125rem;
-	font-style: normal;
 	font-weight: 300;
-	line-height: normal;
 }
 
 @mixin font-size-section-etape-h2 {
 	color: $color-black;
-	font-family: $font-family;
 	font-size: 1rem;
-	font-style: normal;
 	font-weight: 700;
-	line-height: normal;
 	margin-left: 1.64rem;
 }
 @mixin font-size-section__title__choixcontenu-h3 {
 	color: $color-black;
-	font-family: $font-family;
 	font-size: 1.125rem;
-	font-style: normal;
 	font-weight: 800;
-	line-height: normal;
 }
 
 @mixin font-size-section-card-p {
 	color: $color-black;
-	font-family: $font-family;
 	font-size: 1.0625rem;
-	font-style: normal;
 	font-weight: 300;
-	line-height: normal;
 }
 
 @mixin font-size-badge {
@@ -62,31 +44,58 @@
 
 @mixin font-size-footer-h2 {
 	margin: 0;
-	font-family: Shrikhand;
+	font-family: $font-shrikhand;
 	font-size: 1.125rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
 }
 @mixin font-size-footer-a {
 	color: $color-white;
-	font-family: Roboto;
 	font-size: 1rem;
-	font-style: normal;
 	font-weight: 500;
-	line-height: normal;
-}
-@mixin flex-position {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
 }
 
-@mixin span-style {
-	font-family: $font-family;
+@mixin font-size-span {
 	font-size: 0.88638rem;
-	font-style: normal;
 	font-weight: 500;
-	line-height: normal;
+}
+
+@mixin flex-alignement-center {
+	justify-content: center;
+	align-items: center;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////
+@mixin main-card-hover-effect {
+	transform: scale(1);
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+	opacity: 70%;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////
+@mixin animation-menu {
+	animation: slideInFromRight 2s ease-in-out;
+	animation-fill-mode: both;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+@mixin font-size-menu-contenu-h2 {
+	color: $color-black;
+	font-size: 1rem;
+
+	font-weight: 300;
+}
+@mixin font-size-menu-contenu-h3 {
+	color: $color-black;
+	font-size: 1.125rem;
+
+	font-weight: 700;
+}
+@mixin font-size-menu-contenu-p {
+	color: $color-black;
+	font-size: 0.85019rem;
+	font-weight: 300;
+}
+@mixin menu-contenu-hover-ellispsis {
+	width: 100%; // on définit la dimension pour ellipsis fonctionne
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
