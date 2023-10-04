@@ -1,54 +1,24 @@
-@import "../_variables.scss";
-@import "../_mixin.scss";
-
-// *////////////////////////  Header ///////////////////////////////////
-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	height: 3.9375rem;
-	/* Shadow/Badge */
-	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-	padding-right: 5.56rem;
-}
-.header-logo {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 2.25rem;
-	background: $White;
-}
-
-.logo_header {
-	width: 10.125rem;
-	height: 2.75rem;
-	padding-left: 1rem;
-	padding-right: 1.19rem;
-}
-
-.header-back {
-	margin-right: 2.62rem;
-}
+@use "../_Variables.scss" as *;
+@use "../_Mixin.scss" as Mixin;
 
 // *////////////////////////  Logo Menu  ///////////////////////////////////
-.logo-menu {
+.logo__menu {
 	height: 17.18rem;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
 	position: relative;
 	z-index: 1;
-}
 
-.logo-menu img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
 }
 
 // *////////////////////////  Section Menu  ///////////////////////////////////
-.section-menu {
+.section__menu {
 	background-color: #f6f6f6;
 	border-top-left-radius: 2rem;
 	border-top-right-radius: 2rem;
@@ -56,108 +26,136 @@ header {
 	flex-direction: column;
 	height: auto;
 	position: relative;
-	z-index: 2; /* Pour être au-dessus de la div logo-menu */
+	z-index: 2; /* Pour être au-dessus de la div logo__menu */
 	padding: 5px 10px;
 	margin-top: -25px;
-}
 
-.section-title-menu {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	height: 1.6875rem;
-	padding-top: 20px;
-	margin-bottom: 1.5rem;
-}
+	.section__title__menu {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 1.6875rem;
+		padding-top: 20px;
+		margin-bottom: 1.5rem;
 
-.section-title-menu h1 {
-	color: var(--Black, #101010);
-	font-family: Shrikhand;
-	font-size: 1.75rem;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-}
+		h1 {
+			color: var(--Black, #101010);
+			font-family: Shrikhand;
+			font-size: 1.75rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+		.restaurant__favorite {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			position: relative;
 
-.section-title-menu .card-rating {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	position: relative;
-	padding-left: 30px;
-}
+			i {
+				position: absolute; /* Position absolue pour les balises <i> */
+				top: 0; /* Ajustez la valeur pour la position verticale */
+				left: 2.44rem; /* Ajustez la valeur pour la position horizontale */
+				font-size: 1.5rem;
+			}
 
-.section-title-menu .card-rating i {
-	position: absolute; /* Position absolue pour les balises <i> */
-	top: 0; /* Ajustez la valeur pour la position verticale */
-	left: 1rem; /* Ajustez la valeur pour la position horizontale */
-	transition: left 0.2s;
-	cursor: pointer;
-}
+			.fa-solid {
+				opacity: 0;
+				color: transparent;
+				background-clip: text;
+				-webkit-background-clip: text;
+				background-image: $background-gradient;
+				transition: all 0.4s ease-in-out;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
 
-.section-title-menu .card-rating .fa-solid {
-	display: none; /* Par défaut, masquez la balise .fa-solid */
-}
+	.section__menu__choixcontenu {
+		margin-bottom: 1.5rem;
+		// Animation a mettre
 
-.section-title-menu .card-rating i:hover + .fa-solid {
-	display: block; /* Lorsque .card-rating est survolée, affichez .fa-solid */
-}
+		h2 {
+			color: #000;
+			font-family: Roboto;
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
+			text-transform: uppercase;
+		}
+		.section__title__choixcontenu {
+			.bordered__text {
+				border-bottom: 2px solid #99e2d0;
+			}
+		}
 
-// *//////////////////////// Section Menu  ///////////////////////////////////
-.section-menu-choixcontenu {
-	margin-bottom: 1.5rem;
-}
-.section-menu-choixcontenu h2 {
-	color: #000;
-	font-family: Roboto;
-	font-size: 1rem;
-	font-style: normal;
-	font-weight: 300;
-	line-height: normal;
-	text-transform: uppercase;
-}
-.bordered-text {
-	border-bottom: 2px solid #99e2d0;
-}
+		.section__contenu {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 2.52369rem;
+			background: white;
+			box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+			margin-bottom: 1.56rem;
+			padding: 0.94rem;
+			.section__contenu__info {
+				height: 100%;
+				background-color: white;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				border-radius: 1.25rem;
+				overflow: hidden;
+			}
+			// &:hover {
+			// 	transform: scale(1);
+			// 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+			// 	opacity: 70%;
+			// }
+			// 	.section__contenu__title {
+			// 		h3 {
+			// 			color: #000;
+			// 			font-family: Roboto;
+			// 			font-size: 1rem;
+			// 			font-style: normal;
+			// 			font-weight: 700;
+			// 			line-height: normal;
+			// 			margin: 0;
+			// 			text-align: left;
+			// 		}
+			// 	}
 
-.section-contenu {
-	display: flex;
-	flex-direction: column;
-	height: 2.52369rem;
-	border-radius: 1.25rem;
-	background: white;
-	box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-	margin-bottom: 1.56rem;
-	padding: 0.94rem;
-}
+			// 	p {
+			// 		margin: 0;
+			// 		overflow: hidden;
+			// 		color: #000;
+			// 		font-family: Roboto;
+			// 		font-size: 0.94019rem;
+			// 		font-style: normal;
+			// 		font-weight: 300;
+			// 		line-height: normal;
 
-.section-contenu-title h3 {
-	color: #000;
-	font-family: Roboto;
-	font-size: 1rem;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-	margin: 0;
-	text-align: left;
-}
-
-.section-contenu-info p span {
-	float: right;
-	font-weight: bold;
-}
-
-.section-contenu-info p {
-	margin: 0;
-	overflow: hidden;
-	color: #000;
-	font-family: Roboto;
-	font-size: 0.94019rem;
-	font-style: normal;
-	font-weight: 300;
-	line-height: normal;
-}
-
-.section-menu .section-bouton {
-	padding: 0rem 4.69rem 1.56rem 5.12rem;
+			// 		span {
+			// 			float: right;
+			// 			font-weight: bold;
+			// 		}
+			// 	}
+			// }
+			// .section__contenu__check {
+			// 	background: blue;
+			// display: flex; /* Utilisation de flexbox pour aligner les éléments horizontalement */
+			// align-items: center; /* Alignement vertical au centre */
+			// transition: all 0.6s;
+			// transform: translate(0);
+			// .valid {
+			// }
+		}
+	}
 }

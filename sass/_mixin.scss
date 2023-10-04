@@ -1,4 +1,4 @@
-@import "_Variables.scss";
+@use "_Variables.scss" as *;
 
 @mixin font-size-button {
 	font-family: $font-family;
@@ -8,7 +8,7 @@
 	line-height: normal;
 }
 
-@mixin font-size-section-title {
+@mixin font-size-section__title__choixcontenu {
 	font-family: $font-family;
 	font-size: 1.5rem;
 	font-style: normal;
@@ -18,7 +18,7 @@
 	margin: 0;
 }
 
-@mixin font-size-section-title-p {
+@mixin font-size-section__title__choixcontenu-p {
 	font-family: $font-family;
 	font-size: 1.125rem;
 	font-style: normal;
@@ -35,7 +35,7 @@
 	line-height: normal;
 	margin-left: 1.64rem;
 }
-@mixin font-size-section-title-h3 {
+@mixin font-size-section__title__choixcontenu-h3 {
 	color: $color-black;
 	font-family: $font-family;
 	font-size: 1.125rem;

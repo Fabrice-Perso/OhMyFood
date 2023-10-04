@@ -1,0 +1,39 @@
+@use "../_Variables.scss" as *;
+@use "../_Mixin" as Mixin;
+// Footer styles
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background: $color-grey;
+	color: $color-white;
+	padding: 1.375rem 1.5625rem;
+	gap: 1rem;
+
+	h2 {
+		@include Mixin.font-size-footer-h2;
+		width: 8.6875rem;
+		height: 1.6875rem;
+	}
+
+	.footer__lien {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		margin-bottom: 0.44rem;
+
+		a {
+			@include Mixin.font-size-footer-a;
+		}
+
+		i {
+			width: 0.6875rem;
+			height: 0.8125rem;
+			margin-right: 0.938rem;
+
+			.fa-solid {
+				color: $color-white;
+			}
+		}
+	}
+}

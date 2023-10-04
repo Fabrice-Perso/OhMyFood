@@ -1,70 +1,15 @@
-@import "_Variables.scss";
-@import "_Mixin.scss";
-
+@use "_Variables" as *;
+@use "_Mixin" as Mixin;
+@use "_keyframes";
+@import "../sass/modules/loader";
+@import "../sass/modules/header";
+@import "../sass/modules/footer";
 // Global styles and variables
 
 body {
 	color: $color-grey;
 	font-family: $font-family;
 	margin: 0;
-}
-
-// Loader
-.loader__container {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: $background-transparent;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 9999;
-	opacity: 1;
-	animation: fadeInOut 3s linear forwards;
-}
-/* Style du loader */
-.loader {
-	border: 8px solid $color-primary;
-	border-top: 8px solid transparent;
-	border-radius: 50%;
-	width: 30px;
-	height: 30px;
-	animation: spin 2s linear infinite, fadeOut 1s ease-in-out 3s forwards; /* Animation de rotation et de disparition */
-}
-/* Animation pour faire disparaître le background */
-@keyframes fadeInOut {
-	0% {
-		background-color: $background-transparent;
-		z-index: 9999;
-	}
-	100% {
-		background-color: transparent;
-		z-index: auto;
-		opacity: 0;
-		display: none;
-	}
-}
-
-/* Animation de rotation du loader */
-@keyframes spin {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-/* Animation de disparition du loader */
-@keyframes fadeOut {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
 }
 
 // Commun
@@ -81,7 +26,7 @@ a {
 }
 
 button {
-	@include font-size-button;
+	@include Mixin.font-size-button;
 	padding: 0.81rem 1.17rem;
 	width: 13.625rem;
 	height: 3.125rem;
@@ -93,37 +38,107 @@ button {
 	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 	background-color: $color-primary;
 	cursor: pointer;
+
 	&:hover {
 		background: $background-gradient-hover;
 		background-color: $color-secondary;
 	}
 }
 
-// Header styles
-header {
+// Main content styles
+// *//////////////////////// section-location
+.section__location {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	background-color: $color-grey2;
+	height: 3.125rem;
+	width: 100%;
 	align-items: center;
-	height: 3.9375rem;
-	// Shadow/Badge
-	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+	justify-content: center;
+	@include Mixin.font-size-button;
 
-	.header__logo {
+	.icon__location {
 		display: flex;
-		justify-content: center;
 		align-items: center;
-		height: 2.25rem;
-		background: $color-white;
-	}
-	.logo__header {
-		width: 10.125rem;
-		height: 2.75rem;
-		padding-left: 1rem;
-		padding-right: 1.19rem;
+		justify-content: center;
+		color: $color-grey;
+		height: 1rem;
+		width: 0.75rem;
+		padding-right: 1.06rem;
 	}
 }
+// *//////////////////////// section__reservation
+.section__reservation {
+	display: flex;
+	flex-direction: column;
+	background-color: $color-reservation;
+	padding-top: 2.44rem;
 
+	.section__title {
+		@include Mixin.flex-position;
+		height: 4.25rem;
+		padding: 0 2.62rem 0 3.63rem;
+	}
+	p {
+		@include Mixin.flex-position;
+		@include Mixin.font-size-section__title__choixcontenu-p;
+		padding: 0 2.12rem 0 1.63rem;
+	}
+}
+// *//////////////////////// section-fonctionnement
+.section__fonctionnement {
+	display: flex;
+	flex-direction: column;
+	height: 27.5rem;
+
+	.section__title {
+		padding: 3rem 5rem 1.62rem 1.25rem;
+
+		h1 {
+			@include Mixin.font-size-section__title__choixcontenu;
+		}
+	}
+	.section__fonctionnement__etape {
+		background-color: $color-white;
+
+		.fonctionnement__etape {
+			display: flex;
+			align-items: center;
+			height: 4.52369rem;
+			border-radius: 1.25rem;
+			background: $color-reservation;
+			box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+			margin-left: 1.25rem;
+			margin-right: 1.25rem;
+			margin-bottom: 1.56rem;
+
+			&:hover {
+				transform: scale(1);
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+				opacity: 70%;
+			}
+
+			span {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+				width: 1.5rem;
+				height: 1.5rem;
+				background-color: $color-primary;
+				color: $color-white;
+				@include Mixin.span-style;
+				margin-left: -10px;
+			}
+			img {
+				margin-left: 2.09rem;
+			}
+			h2 {
+				@include Mixin.font-size-section-etape-h2;
+			}
+		}
+	}
+}
 // *//////////////////////// section-restaurants
 .section__restaurants {
 	background: $color-reservation;
@@ -132,7 +147,7 @@ header {
 	.section__title {
 		padding: 3rem 5rem 1rem 1.25rem;
 		h1 {
-			@include font-size-section-title;
+			@include Mixin.font-size-section__title__choixcontenu;
 		}
 	}
 
@@ -151,6 +166,12 @@ header {
 			box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 			margin-bottom: 1rem;
 
+			&:hover {
+				transform: scale(1);
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+				opacity: 70%;
+			}
+
 			.badge__new {
 				position: absolute;
 				top: 0;
@@ -162,7 +183,7 @@ header {
 				/* Shadow/Badge */
 				box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 				text-align: center;
-				@include font-size-badge;
+				@include Mixin.font-size-badge;
 				margin-right: 0.94rem;
 				margin-top: 0.75rem;
 			}
@@ -187,14 +208,14 @@ header {
 					margin: 0;
 					padding-top: 0.8rem;
 					height: 1.25rem;
-					@include font-size-section-title-h3;
+					@include Mixin.font-size-section__title__choixcontenu-h3;
 				}
 
 				p {
 					padding-top: 0.31rem;
 					margin: 0;
 					height: 1.5rem;
-					@include font-size-section-card-p;
+					@include Mixin.font-size-section-card-p;
 				}
 
 				.card__detail__left {
@@ -213,6 +234,7 @@ header {
 						position: absolute; /* Position absolue pour les balises <i> */
 						top: 0; /* Ajustez la valeur pour la position verticale */
 						left: -2.56rem; /* Ajustez la valeur pour la position horizontale */
+						font-size: 1.5rem;
 					}
 
 					.fa-solid {
@@ -220,51 +242,13 @@ header {
 						color: transparent;
 						background-clip: text;
 						-webkit-background-clip: text;
-						background: $background-gradient;
+						background-image: $background-gradient;
 						transition: all 0.4s ease-in-out;
 						&:hover {
 							opacity: 1;
 						}
 					}
 				}
-			}
-		}
-	}
-}
-
-// Footer styles
-footer {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	background: $color-grey;
-	color: $color-white;
-	padding: 1.375rem 1.5625rem;
-	gap: 1rem;
-
-	h2 {
-		@include font-size-footer-h2;
-		width: 8.6875rem;
-		height: 1.6875rem;
-	}
-
-	.footer__lien {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		margin-bottom: 0.44rem;
-
-		a {
-			@include font-size-footer-a;
-		}
-
-		i {
-			width: 0.6875rem;
-			height: 0.8125rem;
-			margin-right: 0.938rem;
-
-			.fa-solid {
-				color: $color-white;
 			}
 		}
 	}

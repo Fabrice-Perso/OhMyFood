@@ -1,0 +1,34 @@
+@use "_Variables" as *;
+/* Animation pour faire disparaître le background */
+@keyframes fadeInOut {
+	0% {
+		background-color: $background-transparent;
+		z-index: 9999;
+	}
+	100% {
+		background-color: transparent;
+		z-index: auto;
+		opacity: 0;
+		display: none;
+	}
+}
+
+/* Animation de rotation du loader */
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Animation de disparition du loader */
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

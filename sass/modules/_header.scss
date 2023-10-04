@@ -1,0 +1,29 @@
+@use "../_Variables.scss" as *;
+// Header styles
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 3.9375rem;
+	// Shadow/Badge
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+	a {
+		position: absolute;
+		left: 5%;
+	}
+	.header__logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 2.25rem;
+		background: $color-white;
+	}
+	.logo__header {
+		width: 10.125rem;
+		height: 2.75rem;
+		padding-left: 1rem;
+		padding-right: 1.19rem;
+	}
+}
