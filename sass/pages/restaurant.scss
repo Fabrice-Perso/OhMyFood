@@ -6,12 +6,6 @@
 	width: 100%;
 	height: 17.18rem;
 	object-fit: cover;
-	// height: 17.18rem;
-	// display: flex;
-	// justify-content: center;
-	// align-items: flex-end;
-	// position: relative;
-	// z-index: 1;
 }
 
 // *////////////////////////  Section Menu  ///////////////////////////////////
@@ -19,7 +13,6 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	// height: auto;
 	background-color: #f6f6f6;
 	border-top-left-radius: 2rem;
 	border-top-right-radius: 2rem;
@@ -78,13 +71,6 @@
 		flex-direction: column;
 		width: 100%;
 		gap: 12px;
-		// padding: 0 13px 0 13px;
-		// margin: 0;
-
-		// margin-bottom: 1.5rem;
-		//
-		// height: 100%;
-		// Animation a mettre
 		h2 {
 			color: #000;
 			font-family: Roboto;
@@ -100,7 +86,6 @@
 			}
 		}
 
-		//soit gap-container-animation-prix
 		.section__choixcontenu {
 			display: flex;
 			flex-direction: column;
@@ -112,7 +97,6 @@
 			background-color: white;
 		}
 
-		//container-prix
 		.button__choixcontenu {
 			background-color: white;
 			// width: 500px;
@@ -123,11 +107,7 @@
 			align-items: center;
 			border-radius: 1.5625rem;
 			transition: all ease-in-out 0.4s;
-			// Ajouter l'animation au survol
-			// &:hover .button__choixcontenu_anime {
-			// 	transform: translateX(25px);
-			// }
-			//anime-prix
+
 			.button__choixcontenu_anime {
 				height: 100%;
 				background-color: white;
@@ -140,8 +120,23 @@
 				transition: all ease-in-out 0.4s;
 				&:hover {
 					.button__choixcontenu__info {
-						// width: 0%;
 						transform: translateX(0);
+						h3 {
+							overflow: hidden;
+							text-overflow: ellipsis;
+							margin: 0;
+							flex-wrap: nowrap;
+							white-space: nowrap;
+							max-width: 70%;
+						}
+						p {
+							overflow: hidden;
+							text-overflow: ellipsis;
+							margin: 0;
+							flex-wrap: nowrap;
+							white-space: nowrap;
+							max-width: 70%;
+						}
 					}
 					.button__choixcontenu__check .check {
 						transform: translateX(0);
@@ -166,58 +161,66 @@
 					padding: 10px;
 					overflow: hidden;
 					flex-wrap: nowrap;
-					//text
-					& .button__choixcontenu__title {
+
+					h3 {
 						overflow: hidden;
-						text-overflow: ellipsis;
 						margin: 0;
 						flex-wrap: nowrap;
 						white-space: nowrap;
-						max-width: 70%;
+						color: #000;
+						font-family: Roboto;
+						font-size: 1.125rem;
+						font-style: normal;
+						font-weight: 700;
+						line-height: normal;
+					}
+					p {
+						overflow: hidden;
+						margin: 0;
+						flex-wrap: nowrap;
+						white-space: nowrap;
+						font-family: Roboto;
+						font-size: 0.85019rem;
+						font-style: normal;
+						font-weight: 300;
+						line-height: normal;
 					}
 				}
-				//anime-container
-				.button__choixcontenu__check {
-					// width: 30%;
+			}
+
+			.button__choixcontenu__check {
+				height: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-end;
+				border-radius: 1.5625rem;
+				overflow: hidden;
+
+				span {
+					font-weight: bold;
+					padding: 5px;
+					margin-right: -40px; // Par défaut, la balise span a un margin-right
+					transition: all 0.4s ease-in-out;
+					white-space: nowrap; // Empêche le texte de passer à la ligne
+				}
+
+				// anime
+				.check {
 					height: 100%;
-					display: flex;
-					justify-content: space-between;
-					align-items: flex-end;
-					border-radius: 1.5625rem;
-					overflow: hidden;
+					transition: all 0.4s ease-in-out;
+					transform: translateX(
+						100%
+					); // Par défaut, la balise check est déplacée vers la droite (hors de la vue)
+					opacity: 0; // Par défaut, la balise check est invisible
+				}
 
+				// Appliquer les styles au survol
+				.button__choixcontenu:hover & {
 					span {
-						font-weight: bold;
-						padding: 5px;
-						margin-right: -40px; // Par défaut, la balise span a un margin-right
-						transition: all 0.4s ease-in-out;
-						white-space: nowrap; // Empêche le texte de passer à la ligne
-					}
-
-					// anime
-					.check {
-						height: 100%;
-						transition: all 0.4s ease-in-out;
+						margin-right: 0px; // Au survol, le margin-right de la balise span passe à 0px
 						transform: translateX(
-							100%
-						); // Par défaut, la balise check est déplacée vers la droite (hors de la vue)
-						opacity: 0; // Par défaut, la balise check est invisible
-					}
-
-					// Appliquer les styles au survol
-					.button__choixcontenu:hover & {
-						// .check {
-						// 	transform: translateX(
-						// 		0
-						// 	); // Au survol, la balise check revient à sa position normale
-						// 	opacity: 1; // Au survol, la balise check devient visible
-						// }
-						span {
-							margin-right: 0px; // Au survol, le margin-right de la balise span passe à 0px
-							transform: translateX(
-								-100%
-							); // Au survol, la balise span est déplacée vers la gauche (hors de la vue)
-						}
+							-100%
+						); // Au survol, la balise span est déplacée vers la gauche (hors de la vue)
 					}
 				}
 			}
