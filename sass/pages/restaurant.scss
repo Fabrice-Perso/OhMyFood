@@ -191,6 +191,7 @@
 						padding: 5px;
 						margin-right: -40px; // Par défaut, la balise span a un margin-right
 						transition: all 0.4s ease-in-out;
+						white-space: nowrap; // Empêche le texte de passer à la ligne
 					}
 
 					// anime
