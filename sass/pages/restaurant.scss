@@ -2,35 +2,33 @@
 @use "../_Mixin.scss" as Mixin;
 
 // *////////////////////////  Logo Menu  ///////////////////////////////////
-.logo__menu {
+.image__menu {
+	width: 100%;
 	height: 17.18rem;
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	position: relative;
-	z-index: 1;
-
-	img {
-		height: 100%;
-		width: 100%;
-		object-fit: cover;
-	}
+	object-fit: cover;
+	// height: 17.18rem;
+	// display: flex;
+	// justify-content: center;
+	// align-items: flex-end;
+	// position: relative;
+	// z-index: 1;
 }
 
 // *////////////////////////  Section Menu  ///////////////////////////////////
-.section__menu {
+.menu__restaurant {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	// height: auto;
 	background-color: #f6f6f6;
 	border-top-left-radius: 2rem;
 	border-top-right-radius: 2rem;
-	display: flex;
-	flex-direction: column;
-	height: auto;
-	position: relative;
 	z-index: 2; /* Pour être au-dessus de la div logo__menu */
 	padding: 5px 10px;
 	margin-top: -25px;
+	gap: 40px;
 
-	.section__title__menu {
+	.menu__title {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -75,10 +73,18 @@
 		}
 	}
 
-	.section__menu__choixcontenu {
-		margin-bottom: 1.5rem;
-		// Animation a mettre
+	.menu__contenu_entree {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: 12px;
+		// padding: 0 13px 0 13px;
+		// margin: 0;
 
+		// margin-bottom: 1.5rem;
+		//
+		// height: 100%;
+		// Animation a mettre
 		h2 {
 			color: #000;
 			font-family: Roboto;
@@ -87,75 +93,133 @@
 			font-weight: 300;
 			line-height: normal;
 			text-transform: uppercase;
-		}
-		.section__title__choixcontenu {
+			margin: 0;
+
 			.bordered__text {
 				border-bottom: 2px solid #99e2d0;
 			}
 		}
 
-		.section__contenu {
+		//soit gap-container-animation-prix
+		.section__choixcontenu {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			height: 2.52369rem;
-			background: white;
-			box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-			margin-bottom: 1.56rem;
-			padding: 0.94rem;
-			.section__contenu__info {
+			gap: 30px;
+			color: black;
+			background-color: white;
+		}
+
+		//container-prix
+		.button__choixcontenu {
+			background-color: white;
+			// width: 500px;
+			width: 100%;
+			height: 65px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 1.5625rem;
+			transition: all ease-in-out 0.4s;
+			// Ajouter l'animation au survol
+			// &:hover .button__choixcontenu_anime {
+			// 	transform: translateX(25px);
+			// }
+			//anime-prix
+			.button__choixcontenu_anime {
 				height: 100%;
 				background-color: white;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
 				width: 100%;
-				border-radius: 1.25rem;
+				border-radius: 1.5625rem;
 				overflow: hidden;
+				transition: all ease-in-out 0.4s;
+				&:hover {
+					.button__choixcontenu__info {
+						// width: 0%;
+						transform: translateX(0);
+					}
+					.button__choixcontenu__check .check {
+						transform: translateX(0);
+						opacity: 1;
+					}
+					.button__choixcontenu__check span {
+						margin-right: 0px; // Au survol, le margin-right de la balise span passe à 0px
+						transform: translateX(
+							0%
+						); // Au survol, la balise span est déplacée vers la gauche (hors de la vue)
+					}
+				}
+
+				//text-wrap
+				.button__choixcontenu__info {
+					height: 100%;
+					width: 70%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: flex-start;
+					padding: 10px;
+					overflow: hidden;
+					flex-wrap: nowrap;
+					//text
+					& .button__choixcontenu__title {
+						overflow: hidden;
+						text-overflow: ellipsis;
+						margin: 0;
+						flex-wrap: nowrap;
+						white-space: nowrap;
+						max-width: 70%;
+					}
+				}
+				//anime-container
+				.button__choixcontenu__check {
+					// width: 30%;
+					height: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-end;
+					border-radius: 1.5625rem;
+					overflow: hidden;
+
+					span {
+						font-weight: bold;
+						padding: 5px;
+						margin-right: -40px; // Par défaut, la balise span a un margin-right
+						transition: all 0.4s ease-in-out;
+					}
+
+					// anime
+					.check {
+						height: 100%;
+						transition: all 0.4s ease-in-out;
+						transform: translateX(
+							100%
+						); // Par défaut, la balise check est déplacée vers la droite (hors de la vue)
+						opacity: 0; // Par défaut, la balise check est invisible
+					}
+
+					// Appliquer les styles au survol
+					.button__choixcontenu:hover & {
+						// .check {
+						// 	transform: translateX(
+						// 		0
+						// 	); // Au survol, la balise check revient à sa position normale
+						// 	opacity: 1; // Au survol, la balise check devient visible
+						// }
+						span {
+							margin-right: 0px; // Au survol, le margin-right de la balise span passe à 0px
+							transform: translateX(
+								-100%
+							); // Au survol, la balise span est déplacée vers la gauche (hors de la vue)
+						}
+					}
+				}
 			}
-			// &:hover {
-			// 	transform: scale(1);
-			// 	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
-			// 	opacity: 70%;
-			// }
-			// 	.section__contenu__title {
-			// 		h3 {
-			// 			color: #000;
-			// 			font-family: Roboto;
-			// 			font-size: 1rem;
-			// 			font-style: normal;
-			// 			font-weight: 700;
-			// 			line-height: normal;
-			// 			margin: 0;
-			// 			text-align: left;
-			// 		}
-			// 	}
-
-			// 	p {
-			// 		margin: 0;
-			// 		overflow: hidden;
-			// 		color: #000;
-			// 		font-family: Roboto;
-			// 		font-size: 0.94019rem;
-			// 		font-style: normal;
-			// 		font-weight: 300;
-			// 		line-height: normal;
-
-			// 		span {
-			// 			float: right;
-			// 			font-weight: bold;
-			// 		}
-			// 	}
-			// }
-			// .section__contenu__check {
-			// 	background: blue;
-			// display: flex; /* Utilisation de flexbox pour aligner les éléments horizontalement */
-			// align-items: center; /* Alignement vertical au centre */
-			// transition: all 0.6s;
-			// transform: translate(0);
-			// .valid {
-			// }
 		}
 	}
 }
