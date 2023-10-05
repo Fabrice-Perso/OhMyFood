@@ -67,54 +67,54 @@
 	}
 	.menu__contenu__entree {
 		// Ajoutez ces styles pour l'animation d'apparition
-		animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+		animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 		animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 		.button__choixcontenu :nth-child(2) {
-			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 			animation-delay: 0.5s;
 		}
 		.button__choixcontenu :nth-child(3) {
-			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 			animation-delay: 1s;
 		}
 	}
 	.menu__contenu__plat {
 		// Ajoutez ces styles pour l'animation d'apparition
-		animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+		animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 		animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 		animation-delay: 0.5s;
 		.button__choixcontenu :nth-child(2) {
-			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 			animation-delay: 0.5s;
 		}
 		.button__choixcontenu :nth-child(3) {
-			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 			animation-delay: 1s;
 		}
 	}
 	.menu__contenu__dessert {
 		// Ajoutez ces styles pour l'animation d'apparition
-		animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+		animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 		animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 		animation-delay: 1s;
 		.button__choixcontenu :nth-child(2) {
-			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 			animation-delay: 0.5s;
 		}
 		.button__choixcontenu :nth-child(3) {
-			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 			animation-delay: 1s;
 		}
 	}
 	.section__bouton {
 		// Ajoutez ces styles pour l'animation d'apparition
-		animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+		animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 		animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 		animation-delay: 2s;
 	}
@@ -155,7 +155,6 @@
 
 		.button__choixcontenu {
 			background-color: white;
-			// width: 500px;
 			width: 100%;
 			height: 65px;
 			display: flex;
@@ -206,7 +205,6 @@
 					}
 				}
 
-				//text-wrap
 				.button__choixcontenu__info {
 					height: 100%;
 					width: 70%;
@@ -217,7 +215,6 @@
 					padding: 10px;
 					overflow: hidden;
 					flex-wrap: nowrap;
-
 					h3 {
 						overflow: hidden;
 						margin: 0;
