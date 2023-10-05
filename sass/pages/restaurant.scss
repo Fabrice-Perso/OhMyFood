@@ -11,64 +11,60 @@
 // *////////////////////////  Section Menu  ///////////////////////////////////
 .menu__restaurant {
 	position: relative;
-	gap: 40px;
 	display: flex;
-	padding: 5px 10px;
-	margin-top: -25px;
-	border-top-left-radius: 2rem;
-	border-top-right-radius: 2rem;
 	flex-direction: column;
 	background-color: #f6f6f6;
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+	z-index: 2; /* Pour être au-dessus de la div logo__menu */
+	padding: 5px 10px;
+	margin-top: -25px;
+	gap: 40px;
 
 	.menu__title {
 		display: flex;
+		flex-direction: row;
+		align-items: center;
 		height: 1.6875rem;
 		padding-top: 20px;
 		margin-bottom: 1.5rem;
-		flex-direction: row;
-		align-items: center;
 
 		h1 {
-			color: Black;
+			color: var(--Black, #101010);
 			font-family: Shrikhand;
 			font-size: 1.75rem;
 			font-style: normal;
 			font-weight: 400;
 			line-height: normal;
 		}
-
 		.restaurant__favorite {
-			position: relative;
 			display: flex;
-			height: 100%;
 			flex-direction: row;
-			justify-content: center;
 			align-items: center;
+			justify-content: center;
+			height: 100%;
+			position: relative;
 
 			i {
 				position: absolute; /* Position absolue pour les balises <i> */
-				top: 0;
-				left: 2.44rem;
+				top: 0; /* Ajustez la valeur pour la position verticale */
+				left: 2.44rem; /* Ajustez la valeur pour la position horizontale */
 				font-size: 1.5rem;
 			}
 
 			.fa-solid {
+				opacity: 0;
 				color: transparent;
-				background-image: $background-gradient;
 				background-clip: text;
 				-webkit-background-clip: text;
-				opacity: 0;
-				transition: $transition-menu;
-				// action au survol de l'icone
+				background-image: $background-gradient;
+				transition: all 0.4s ease-in-out;
 				&:hover {
 					opacity: 1;
 				}
 			}
 		}
 	}
-
-	// *////////////////////////  Animation pour laffichage du menu  ///////////////////////////////////
-	//Animation pour laffichage du menu entrée
 	.menu__contenu__entree {
 		// Ajoutez ces styles pour l'animation d'apparition
 		animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
@@ -79,56 +75,50 @@
 			animation-delay: 0.5s;
 		}
 		.button__choixcontenu :nth-child(3) {
-			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 			animation-delay: 1s;
 		}
 	}
-
-	//Animation pour laffichage du menu plat
 	.menu__contenu__plat {
 		// Ajoutez ces styles pour l'animation d'apparition
-		animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+		animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 		animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 		animation-delay: 0.5s;
 		.button__choixcontenu :nth-child(2) {
-			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 			animation-delay: 0.5s;
 		}
 		.button__choixcontenu :nth-child(3) {
-			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 			animation-delay: 1s;
 		}
 	}
-
-	//Animation pour laffichage du menu plat
 	.menu__contenu__dessert {
 		// Ajoutez ces styles pour l'animation d'apparition
-		animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+		animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 		animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 		animation-delay: 1s;
 		.button__choixcontenu :nth-child(2) {
-			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 			animation-delay: 0.5s;
 		}
 		.button__choixcontenu :nth-child(3) {
-			animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+			animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 			animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 			animation-delay: 1s;
 		}
 	}
-
 	.section__bouton {
 		// Ajoutez ces styles pour l'animation d'apparition
-		animation: slideInFromRight 4s ease-in-out; // Utilisez l'animation "slideInFromLeft"
+		animation: slideInFromRight 2s ease-in-out; // Utilisez l'animation "slideInFromLeft"
 		animation-fill-mode: both; // Assurez-vous que l'élément conserve les styles finaux de l'animation
 		animation-delay: 2s;
 	}
 
-	// *////////////////////////  Section Menu Contenu  ///////////////////////////////////
 	.menu__contenu__entree,
 	.menu__contenu__plat,
 	.menu__contenu__dessert {
@@ -138,54 +128,69 @@
 		gap: 12px;
 
 		h2 {
-			@include Mixin.font-size-menu-contenu-h2;
+			color: #000;
+			font-family: Roboto;
+			font-size: 1rem;
+			font-style: normal;
+			font-weight: 300;
+			line-height: normal;
 			text-transform: uppercase;
 			margin: 0;
 
-			.bordered__title {
+			.bordered__text {
 				border-bottom: 2px solid #99e2d0;
 			}
 		}
 
-		.button__choixcontenu {
-			background-color: white;
-			// width: 500px;
-			width: 100%;
-			height: 65px;
-			border-radius: $button-border-radius;
+		.section__choixcontenu {
+			display: flex;
+			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			background-color: $color-white;
-			transition: $transition-menu;
+			height: 2.52369rem;
+			gap: 30px;
+			color: black;
+			background-color: white;
+		}
 
-			&:hover {
-				span {
-					margin-right: 0px; // Au survol, le margin-right de la balise span passe à 0px
-					transform: translateX(
-						-100%
-					); // Au survol, la balise span est déplacée vers la gauche (hors de la vue)
-				}
-			}
+		.button__choixcontenu {
+			background-color: white;
+			width: 100%;
+			height: 65px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 1.5625rem;
+			transition: all ease-in-out 0.4s;
 
-			//au chargement de la class
 			.button__choixcontenu_anime {
-				display: flex;
 				height: 100%;
-				width: 100%;
+				background-color: white;
+				display: flex;
 				justify-content: space-between;
 				align-items: center;
-				border-radius: $button-border-radius;
+				width: 100%;
+				border-radius: 1.5625rem;
 				overflow: hidden;
-				transition: $transition-menu;
-
-				// Action lorsqu'on survol
+				transition: all ease-in-out 0.4s;
 				&:hover {
 					.button__choixcontenu__info {
 						transform: translateX(0);
-
-						h3,
+						h3 {
+							overflow: hidden;
+							text-overflow: ellipsis;
+							margin: 0;
+							flex-wrap: nowrap;
+							white-space: nowrap;
+							max-width: 70%;
+						}
 						p {
-							@include Mixin.menu-contenu-hover-ellispsis;
+							overflow: hidden;
+							text-overflow: ellipsis;
+							margin: 0;
+							flex-wrap: nowrap;
+							white-space: nowrap;
+							max-width: 70%;
 						}
 					}
 					.button__choixcontenu__check .check {
@@ -200,18 +205,16 @@
 					}
 				}
 
-				//text-wrap
 				.button__choixcontenu__info {
 					height: 100%;
 					width: 70%;
 					display: flex;
-					padding: 10px;
 					flex-direction: column;
 					justify-content: center;
 					align-items: flex-start;
+					padding: 10px;
 					overflow: hidden;
 					flex-wrap: nowrap;
-
 					h3 {
 						overflow: hidden;
 						margin: 0;
@@ -225,38 +228,61 @@
 						line-height: normal;
 					}
 					p {
-						@include Mixin.menu-contenu-hover-ellispsis;
-						@include Mixin.font-size-menu-contenu-p;
+						overflow: hidden;
+						margin: 0;
+						flex-wrap: nowrap;
+						white-space: nowrap;
+						font-family: Roboto;
+						font-size: 0.85019rem;
+						font-style: normal;
+						font-weight: 300;
+						line-height: normal;
 					}
 				}
 			}
 
 			.button__choixcontenu__check {
-				display: flex;
 				height: 100%;
-				border-radius: $button-border-radius;
+				display: flex;
 				justify-content: space-between;
 				align-items: flex-end;
+				border-radius: 1.5625rem;
 				overflow: hidden;
 
 				span {
+					font-weight: bold;
 					padding: 5px;
 					margin-right: -40px; // Par défaut, la balise span a un margin-right
-					font-weight: bold;
+					transition: all 0.4s ease-in-out;
 					white-space: nowrap; // Empêche le texte de passer à la ligne
-					transition: $transition-menu;
 				}
 
 				// anime
 				.check {
 					height: 100%;
-					transition: $transition-menu;
+					transition: all 0.4s ease-in-out;
 					transform: translateX(
 						100%
 					); // Par défaut, la balise check est déplacée vers la droite (hors de la vue)
 					opacity: 0; // Par défaut, la balise check est invisible
 				}
+
+				// Appliquer les styles au survol
+				.button__choixcontenu:hover & {
+					span {
+						margin-right: 0px; // Au survol, le margin-right de la balise span passe à 0px
+						transform: translateX(
+							-100%
+						); // Au survol, la balise span est déplacée vers la gauche (hors de la vue)
+					}
+				}
 			}
 		}
+	}
+}
+/* Styles pour les écrans de bureau (1024px et plus) */
+@media screen and (min-width: 1024px) {
+	.menu__restaurant {
+		margin: -25px 10rem 0 10rem;
 	}
 }

@@ -7,8 +7,8 @@
 // Global styles and variables
 
 body {
-	font-family: $font-family;
 	color: $color-grey;
+	font-family: $font-family;
 	margin: 0;
 }
 
@@ -20,22 +20,23 @@ a {
 
 .section__bouton {
 	display: flex;
-	@include Mixin.flex-alignement-center;
+	justify-content: center;
+	align-items: center;
 	padding: 1.69rem 4.69rem 3.56rem 5.12rem;
 }
 
 button {
-	height: 3.125rem;
-	width: 13.625rem;
-	padding: 0.81rem 1.17rem;
-	border: none;
-	border-radius: $button-border-radius;
-	color: $color-white;
-	background: $background-gradient;
-	background-color: $color-primary;
 	@include Mixin.font-size-button;
-	box-shadow: $box-shadow;
+	padding: 0.81rem 1.17rem;
+	width: 13.625rem;
+	height: 3.125rem;
+	border: none;
+	border-radius: 1.5625rem;
 	transition-duration: 0.4s;
+	background: $background-gradient;
+	color: $color-white;
+	box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+	background-color: $color-primary;
 	cursor: pointer;
 
 	&:hover {
@@ -48,38 +49,38 @@ button {
 // *//////////////////////// section-location
 .section__location {
 	display: flex;
+	flex-direction: row;
+	background-color: $color-grey2;
 	height: 3.125rem;
 	width: 100%;
-	flex-direction: row;
-	@include Mixin.flex-alignement-center;
+	align-items: center;
+	justify-content: center;
 	@include Mixin.font-size-button;
-	background-color: $color-grey2;
 
 	.icon__location {
 		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $color-grey;
 		height: 1rem;
 		width: 0.75rem;
 		padding-right: 1.06rem;
-		@include Mixin.flex-alignement-center;
-		color: $color-grey;
 	}
 }
-
 // *//////////////////////// section__reservation
 .section__reservation {
 	display: flex;
-	padding-top: 2.44rem;
 	flex-direction: column;
 	background-color: $color-reservation;
+	padding-top: 2.44rem;
 
 	.section__title {
 		display: flex;
+		@include Mixin.flex-alignement-center;
+		text-align: center;
 		height: 4.25rem;
 		padding: 0 2.62rem 0 3.63rem;
-		text-align: center;
-		@include Mixin.flex-alignement-center;
 	}
-
 	p {
 		display: flex;
 		padding: 0 2.12rem 0 1.63rem;
@@ -91,8 +92,8 @@ button {
 // *//////////////////////// section-fonctionnement
 .section__fonctionnement {
 	display: flex;
-	height: 27.5rem;
 	flex-direction: column;
+	height: 27.5rem;
 
 	.section__title {
 		padding: 3rem 5rem 1.62rem 1.25rem;
@@ -102,34 +103,38 @@ button {
 		}
 	}
 	.section__fonctionnement__etape {
+		background-color: $color-white;
 		display: flex;
 		flex-direction: column;
-		background-color: $color-white;
-		gap: 30px;
 
 		.fonctionnement__etape {
 			display: flex;
-			height: 4.52369rem;
-			margin: 0 1.25rem;
-			border-radius: 1.25rem;
 			align-items: center;
+			height: 4.52369rem;
+			border-radius: 1.25rem;
 			background: $color-reservation;
-			box-shadow: $box-shadow;
+			box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+			margin-left: 1.25rem;
+			margin-right: 1.25rem;
+			margin-bottom: 1.56rem;
 
 			&:hover {
-				@include Mixin.main-card-hover-effect;
+				transform: scale(1);
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+				opacity: 70%;
 			}
 
 			span {
 				display: flex;
-				height: 1.5rem;
-				width: 1.5rem;
-				margin-left: -10px;
+				justify-content: center;
+				align-items: center;
 				border-radius: 50%;
-				@include Mixin.flex-alignement-center;
+				width: 1.5rem;
+				height: 1.5rem;
 				background-color: $color-primary;
 				color: $color-white;
 				@include Mixin.font-size-span;
+				margin-left: -10px;
 			}
 			img {
 				margin-left: 2.09rem;
@@ -142,8 +147,8 @@ button {
 }
 // *//////////////////////// section-restaurants
 .section__restaurants {
-	padding-bottom: 4.12rem;
 	background: $color-reservation;
+	padding-bottom: 4.12rem;
 
 	.section__title {
 		padding: 3rem 5rem 1rem 1.25rem;
@@ -163,25 +168,28 @@ button {
 			height: 15.6875rem;
 			border-radius: 0.9375rem;
 			background: $color-white;
-			box-shadow: $box-shadow;
-
+			/* Shadow/Card */
+			box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 			&:hover {
-				@include Mixin.main-card-hover-effect;
+				transform: scale(1);
+				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+				opacity: 70%;
 			}
 
 			.badge__new {
 				position: absolute;
 				top: 0;
 				right: 0;
-				height: 1.8125rem;
 				width: 5rem;
-				margin-right: 0.94rem;
-				margin-top: 0.75rem;
+				height: 1.8125rem;
 				border-radius: 0.125rem;
 				background: $background-badge;
-				box-shadow: $box-shadow;
+				/* Shadow/Badge */
+				box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 				text-align: center;
 				@include Mixin.font-size-badge;
+				margin-right: 0.94rem;
+				margin-top: 0.75rem;
 			}
 
 			.restaurant__picture {
@@ -194,22 +202,23 @@ button {
 
 			.restaurant__card__detail {
 				display: flex;
-				padding: 0 0.81rem 0.8rem 0;
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
+				padding-left: 0.81rem;
+				padding-bottom: 0.8rem;
 
 				h3 {
-					height: 1.25rem;
 					margin: 0;
 					padding-top: 0.8rem;
+					height: 1.25rem;
 					@include Mixin.font-size-section__title__choixcontenu-h3;
 				}
 
 				p {
-					height: 1.5rem;
 					padding-top: 0.31rem;
 					margin: 0;
+					height: 1.5rem;
 					@include Mixin.font-size-section-card-p;
 				}
 
@@ -219,11 +228,11 @@ button {
 				}
 
 				.restaurant__favorite {
-					position: relative;
 					display: flex;
-					height: 100%;
 					flex-direction: row;
 					align-items: center;
+					height: 100%;
+					position: relative;
 
 					i {
 						position: absolute; /* Position absolue pour les balises <i> */
@@ -239,13 +248,39 @@ button {
 						-webkit-background-clip: text;
 						background-image: $background-gradient;
 						transition: all 0.4s ease-in-out;
-
 						&:hover {
 							opacity: 1;
 						}
 					}
 				}
 			}
+		}
+	}
+}
+/* Styles pour les écrans de bureau (1024px et plus) */
+@media screen and (min-width: 1024px) {
+	.section__fonctionnement {
+		padding: 0 7em;
+		height: 14.27rem;
+		.section__fonctionnement__etape {
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			.fonctionnement__etape {
+				width: 20.15538rem;
+			}
+		}
+	}
+	.section__restaurants {
+		padding: 0 8em;
+
+		.section__restaurants__cards {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			gap: 3.12rem 6.25rem;
+			justify-content: center;
+			text-align: center;
 		}
 	}
 }

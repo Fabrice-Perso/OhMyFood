@@ -18,8 +18,7 @@ footer {
 
 	.footer__lien {
 		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
+		flex-direction: column;
 		margin-bottom: 0.44rem;
 
 		a {
@@ -33,6 +32,33 @@ footer {
 
 			.fa-solid {
 				color: $color-white;
+			}
+		}
+	}
+}
+
+/* Styles pour les écrans de bureau (1024px et plus) */
+@media screen and (min-width: 1024px) {
+	/* Mettre en ligne au-delà de 1024px */
+	footer {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: end;
+		align-items: center;
+
+		/* Styles pour la section__footer à l'intérieur du footer */
+		.section__footer {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+
+			/* Styles pour les éléments .footer__lien à l'intérieur de la section__footer */
+			.footer__lien {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				margin-right: 1rem;
 			}
 		}
 	}
