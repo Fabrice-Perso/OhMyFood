@@ -8,7 +8,7 @@
 
 body {
 	font-family: $font-family;
-	color: $color-grey;
+	color: $color-principal;
 	margin: 0;
 }
 
@@ -53,7 +53,7 @@ button {
 	flex-direction: row;
 	@include Mixin.flex-alignement-center;
 	@include Mixin.font-size-button;
-	background-color: $color-grey2;
+	background-color: $background-location;
 
 	.icon__location {
 		display: flex;
@@ -70,7 +70,7 @@ button {
 	display: flex;
 	padding-top: 2.44rem;
 	flex-direction: column;
-	background-color: $color-reservation;
+	background-color: $background-restaurant;
 
 	.section__title {
 		display: flex;
@@ -113,7 +113,7 @@ button {
 			margin: 0 1.25rem;
 			border-radius: 1.25rem;
 			align-items: center;
-			background: $color-reservation;
+			background: $background-restaurant;
 			box-shadow: $box-shadow;
 
 			&:hover {
@@ -143,7 +143,7 @@ button {
 // *//////////////////////// section-restaurants
 .section__restaurants {
 	padding-bottom: 4.12rem;
-	background: $color-reservation;
+	background: $background-restaurant;
 
 	.section__title {
 		padding: 3rem 5rem 1rem 1.25rem;

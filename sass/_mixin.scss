@@ -8,7 +8,7 @@
 @mixin font-size-section__title__choixcontenu {
 	font-size: 1.5rem;
 	font-weight: 700;
-	color: $color-black;
+	color: $color-principal;
 	margin: 0;
 }
 
@@ -18,19 +18,19 @@
 }
 
 @mixin font-size-section-etape-h2 {
-	color: $color-black;
+	color: $color-principal;
 	font-size: 1rem;
 	font-weight: 700;
 	margin-left: 1.64rem;
 }
 @mixin font-size-section__title__choixcontenu-h3 {
-	color: $color-black;
+	color: $color-principal;
 	font-size: 1.125rem;
 	font-weight: 800;
 }
 
 @mixin font-size-section-card-p {
-	color: $color-black;
+	color: $color-principal;
 	font-size: 1.0625rem;
 	font-weight: 300;
 }
@@ -44,7 +44,7 @@
 
 @mixin font-size-footer-h2 {
 	margin: 0;
-	font-family: $font-shrikhand;
+	font-family: $font-titre;
 	font-size: 1.125rem;
 }
 @mixin font-size-footer-a {
@@ -75,27 +75,29 @@
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-@mixin font-size-menu-contenu-h2 {
-	color: $color-black;
-	font-size: 1rem;
 
-	font-weight: 300;
-}
-@mixin font-size-menu-contenu-h3 {
-	color: $color-black;
-	font-size: 1.125rem;
-
-	font-weight: 700;
-}
-@mixin font-size-menu-contenu-p {
-	color: $color-black;
-	font-size: 0.85019rem;
-	font-weight: 300;
-}
-@mixin menu-contenu-hover-ellispsis {
+@mixin hover-ellispsis {
 	width: 100%; // on définit la dimension pour ellipsis fonctionne
 	margin: 0;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+@mixin font-size-title-h1 {
+	font-family: $font-titre;
+	font-size: 1.75rem;
+	font-weight: 400;
+}
+@mixin font-size-title-h2 {
+	font-size: 1rem;
+	font-weight: 300;
+}
+@mixin font-size-title-h3 {
+	font-size: 1.125rem;
+	font-weight: 700;
+}
+@mixin font-size-title-h4 {
+	font-size: 0.94019rem;
+	font-weight: 300;
 }

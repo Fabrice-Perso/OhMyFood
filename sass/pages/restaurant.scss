@@ -11,30 +11,25 @@
 // *////////////////////////  Section Menu  ///////////////////////////////////
 .menu__restaurant {
 	position: relative;
-	gap: 40px;
 	display: flex;
-	padding: 5px 10px;
-	margin-top: -25px;
-	border-top-left-radius: 2rem;
-	border-top-right-radius: 2rem;
+	padding: 0.313rem 0.625rem;
+	margin: -1.563rem 0 0 0;
+	border-radius: 2rem 2rem 0 0;
+	gap: 2.5rem;
 	flex-direction: column;
-	background-color: #f6f6f6;
+	background-color: $background-restaurant;
 
 	.menu__title {
 		display: flex;
 		height: 1.6875rem;
-		padding-top: 20px;
+		padding-top: 1.25rem;
 		margin-bottom: 1.5rem;
 		flex-direction: row;
 		align-items: center;
+		justify-content: flex-start;
 
 		h1 {
-			color: Black;
-			font-family: Shrikhand;
-			font-size: 1.75rem;
-			font-style: normal;
-			font-weight: 400;
-			line-height: normal;
+			@include Mixin.font-size-title-h1;
 		}
 
 		.restaurant__favorite {
@@ -42,8 +37,7 @@
 			display: flex;
 			height: 100%;
 			flex-direction: row;
-			justify-content: center;
-			align-items: center;
+			@include Mixin.flex-alignement-center;
 
 			i {
 				position: absolute; /* Position absolue pour les balises <i> */
@@ -59,6 +53,7 @@
 				-webkit-background-clip: text;
 				opacity: 0;
 				transition: $transition-menu;
+
 				// action au survol de l'icone
 				&:hover {
 					opacity: 1;
@@ -143,33 +138,32 @@
 	.menu__contenu__plat,
 	.menu__contenu__dessert {
 		display: flex;
-		flex-direction: column;
 		width: 100%;
-		gap: 12px;
+		gap: 0.75rem;
+		flex-direction: column;
 
 		h2 {
-			@include Mixin.font-size-menu-contenu-h2;
+			@include Mixin.font-size-title-h2;
 			text-transform: uppercase;
 			margin: 0;
 
 			.bordered__title {
-				border-bottom: 2px solid #99e2d0;
+				border-bottom: 0.125rem solid $background-badge;
 			}
 		}
 
 		.button__choixcontenu {
 			display: flex;
+			height: 4.063rem;
 			width: 100%;
-			height: 65px;
 			border-radius: $button-border-radius;
-			justify-content: center;
-			align-items: center;
+			@include Mixin.flex-alignement-center;
 			background-color: $color-white;
 			transition: $transition-menu;
 
 			&:hover {
 				span {
-					margin-right: 0px; // Au survol, le margin-right de la balise span passe à 0px
+					margin-right: 0; // Au survol, le margin-right de la balise span passe à 0px
 					transform: translateX(
 						-100%
 					); // Au survol, la balise span est déplacée vers la gauche (hors de la vue)
@@ -194,7 +188,7 @@
 
 						h3,
 						p {
-							@include Mixin.menu-contenu-hover-ellispsis;
+							@include Mixin.hover-ellispsis;
 						}
 					}
 
@@ -214,21 +208,21 @@
 				}
 				//au chargement de la class
 				.button__choixcontenu__info {
+					display: flex;
 					height: 100%;
 					width: 70%;
-					display: flex;
-					padding: 10px;
+					padding: 0.625rem;
 					flex-direction: column;
 					justify-content: center;
 					align-items: flex-start;
 					overflow: hidden;
 					h3 {
-						@include Mixin.menu-contenu-hover-ellispsis;
-						@include Mixin.font-size-menu-contenu-h3;
+						@include Mixin.hover-ellispsis;
+						@include Mixin.font-size-title-h3;
 					}
-					p {
-						@include Mixin.menu-contenu-hover-ellispsis;
-						@include Mixin.font-size-menu-contenu-p;
+					h4 {
+						@include Mixin.hover-ellispsis;
+						@include Mixin.font-size-title-h4;
 					}
 				}
 			}
@@ -242,8 +236,8 @@
 				overflow: hidden;
 
 				span {
-					padding: 5px;
-					margin-right: -40px; // Par défaut, la balise span a un margin-right
+					padding: 0.313rem;
+					margin-right: -2.5rem; // Par défaut, la balise span a un margin-right
 					font-weight: bold;
 					white-space: nowrap; // Empêche le texte de passer à la ligne
 					transition: $transition-menu;
@@ -265,6 +259,9 @@
 /* Styles pour les écrans de bureau (1024px et plus) */
 @media screen and (min-width: 1024px) {
 	.menu__restaurant {
-		margin: -25px 10rem 0 10rem;
+		margin: -1.563rem 10rem 0 10rem;
+		.menu__title {
+			@include Mixin.flex-alignement-center;
+		}
 	}
 }

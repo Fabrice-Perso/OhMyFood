@@ -1,17 +1,11 @@
 /* Colors */
+$color-principal: #000;
+
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-grey: #353535;
-$color-grey2: #eaeaea;
 $color-grey3: #999;
 $color-white: #fff;
-$color-black: #000;
-$color-reservation: #f6f6f6;
-$background-badge: #99e2d0;
-$color-badge: #008766;
-// Définition de variables pour les polices
-$font-family: "Roboto", sans-serif;
-$font-shrikhand: "Shrikhand", cursive;
 
 // $Grey: #353535;
 // $Grey2: #eaeaea;
@@ -20,6 +14,15 @@ $font-shrikhand: "Shrikhand", cursive;
 // $Gradient-secondaire: #ff79da;
 // $font-family: Roboto;
 
+//////////////////////////////////////////////
+$font-family: "Roboto", sans-serif;
+$font-titre: "Shrikhand", cursive;
+//////////////////////////////////////////////
+$color-badge: #008766;
+//////////////////////////////////////////////
+$background-location: #eaeaea;
+$background-badge: #99e2d0;
+$background-restaurant: #f6f6f6;
 $background-gradient: linear-gradient(
 	0deg,
 	$color-primary 0%,
@@ -31,9 +34,8 @@ $background-gradient-hover: linear-gradient(
 	$color-primary 100%
 );
 $background-transparent: rgba(255, 255, 255, 0.9);
-
+//////////////////////////////////////////////
 $transition-menu: all 0.4s ease-in-out;
-
 $button-border-radius: 1.5625rem;
-
 $box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+//////////////////////////////////////////////
