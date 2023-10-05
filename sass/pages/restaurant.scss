@@ -29,7 +29,7 @@
 		justify-content: flex-start;
 
 		h1 {
-			@include Mixin.font-size-title-h1;
+			@include Mixin.font-title-menu;
 		}
 
 		.restaurant__favorite {
@@ -143,7 +143,7 @@
 		flex-direction: column;
 
 		h2 {
-			@include Mixin.font-size-title-h2;
+			@include Mixin.font-subtitle-menu;
 			text-transform: uppercase;
 			margin: 0;
 
@@ -218,11 +218,11 @@
 					overflow: hidden;
 					h3 {
 						@include Mixin.hover-ellispsis;
-						@include Mixin.font-size-title-h3;
+						@include Mixin.font-title-plat;
 					}
 					h4 {
 						@include Mixin.hover-ellispsis;
-						@include Mixin.font-size-title-h4;
+						@include Mixin.font-subtitle-plat;
 					}
 				}
 			}

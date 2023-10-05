@@ -22,7 +22,7 @@
 	border: 1rem solid $color-primary;
 	border-top: 1rem solid transparent;
 	border-radius: 50%;
-	height: 7.5px;
-	width: 7.5px;
+	height: 7.5rem;
+	width: 7.5rem;
 	animation: spin 2s linear infinite, fadeOut 1s ease-in-out 3s forwards; /* Animation de rotation et de disparition */
 }

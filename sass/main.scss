@@ -9,6 +9,7 @@
 body {
 	font-family: $font-family;
 	color: $color-principal;
+	background-color: $background-principal;
 	margin: 0;
 }
 
@@ -33,7 +34,7 @@ button {
 	color: $color-white;
 	background: $background-gradient;
 	background-color: $color-primary;
-	@include Mixin.font-size-button;
+	@include Mixin.font-button;
 	box-shadow: $box-shadow;
 	transition-duration: 0.4s;
 	cursor: pointer;
@@ -52,7 +53,7 @@ button {
 	width: 100%;
 	flex-direction: row;
 	@include Mixin.flex-alignement-center;
-	@include Mixin.font-size-button;
+	@include Mixin.font-button;
 	background-color: $background-location;
 
 	.icon__location {
@@ -61,7 +62,7 @@ button {
 		width: 0.75rem;
 		padding-right: 1.06rem;
 		@include Mixin.flex-alignement-center;
-		color: $color-grey;
+		color: $color-icon;
 	}
 }
 
@@ -72,12 +73,13 @@ button {
 	flex-direction: column;
 	background-color: $background-restaurant;
 
-	.section__title {
+	h1 {
 		display: flex;
 		height: 4.25rem;
 		padding: 0 2.62rem 0 3.63rem;
 		text-align: center;
 		@include Mixin.flex-alignement-center;
+		@include Mixin.font-title-choixmenu;
 	}
 
 	p {
@@ -85,7 +87,7 @@ button {
 		padding: 0 2.12rem 0 1.63rem;
 		text-align: center;
 		@include Mixin.flex-alignement-center;
-		@include Mixin.font-size-section__title__choixcontenu-p;
+		@include Mixin.font-subtitle-choixmenu;
 	}
 }
 // *//////////////////////// section-fonctionnement
@@ -94,18 +96,15 @@ button {
 	height: 27.5rem;
 	flex-direction: column;
 
-	.section__title {
+	h1 {
 		padding: 3rem 5rem 1.62rem 1.25rem;
-
-		h1 {
-			@include Mixin.font-size-section__title__choixcontenu;
-		}
+		@include Mixin.font-title-choixmenu;
 	}
+
 	.section__fonctionnement__etape {
 		display: flex;
+		gap: 1.875rem;
 		flex-direction: column;
-		background-color: $color-white;
-		gap: 30px;
 
 		.fonctionnement__etape {
 			display: flex;
@@ -117,25 +116,26 @@ button {
 			box-shadow: $box-shadow;
 
 			&:hover {
-				@include Mixin.main-card-hover-effect;
+				@include Mixin.hover-effect;
 			}
 
 			span {
 				display: flex;
 				height: 1.5rem;
 				width: 1.5rem;
-				margin-left: -10px;
+				margin-left: -0.625rem;
 				border-radius: 50%;
 				@include Mixin.flex-alignement-center;
-				background-color: $color-primary;
 				color: $color-white;
-				@include Mixin.font-size-span;
+				background-color: $color-primary;
+				@include Mixin.font-span;
 			}
+
 			img {
 				margin-left: 2.09rem;
 			}
 			h2 {
-				@include Mixin.font-size-section-etape-h2;
+				@include Mixin.font-etape;
 			}
 		}
 	}
@@ -147,8 +147,9 @@ button {
 
 	.section__title {
 		padding: 3rem 5rem 1rem 1.25rem;
+
 		h1 {
-			@include Mixin.font-size-section__title__choixcontenu;
+			@include Mixin.font-title-choixmenu;
 		}
 	}
 
@@ -162,11 +163,10 @@ button {
 			position: relative;
 			height: 15.6875rem;
 			border-radius: 0.9375rem;
-			background: $color-white;
 			box-shadow: $box-shadow;
 
 			&:hover {
-				@include Mixin.main-card-hover-effect;
+				@include Mixin.hover-effect;
 			}
 
 			.badge__new {
@@ -175,8 +175,7 @@ button {
 				right: 0;
 				height: 1.8125rem;
 				width: 5rem;
-				margin-right: 0.94rem;
-				margin-top: 0.75rem;
+				margin: 0.75rem 0.94rem 0 0;
 				border-radius: 0.125rem;
 				background: $background-badge;
 				box-shadow: $box-shadow;
@@ -194,28 +193,26 @@ button {
 
 			.restaurant__card__detail {
 				display: flex;
-				padding: 0 0.81rem 0.8rem 0;
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
 
-				h3 {
+				h1 {
 					height: 1.25rem;
-					margin: 0;
 					padding-top: 0.8rem;
-					@include Mixin.font-size-section__title__choixcontenu-h3;
+					@include Mixin.font-title-choixrestaurant;
 				}
 
-				p {
+				h2 {
 					height: 1.5rem;
 					padding-top: 0.31rem;
-					margin: 0;
-					@include Mixin.font-size-section-card-p;
+					@include Mixin.font-subtitle-choixrestaurant;
 				}
 
 				.card__detail__left {
 					display: flex;
 					flex-direction: column;
+					padding-left: 0.5rem;
 				}
 
 				.restaurant__favorite {

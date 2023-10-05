@@ -7,8 +7,8 @@ footer {
 	gap: 1rem;
 	flex-direction: column;
 	align-items: flex-start;
-	color: $color-white;
-	background: $color-grey;
+	color: $color-footer;
+	background: $background-footer;
 
 	h2 {
 		height: 1.6875rem;
@@ -35,7 +35,7 @@ footer {
 				margin-right: 0.938rem;
 
 				.fa-solid {
-					color: $color-white;
+					color: $color-footer;
 				}
 			}
 		}
