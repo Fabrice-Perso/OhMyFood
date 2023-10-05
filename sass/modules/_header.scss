@@ -3,9 +3,9 @@
 // Header styles
 header {
 	display: flex;
+	height: 3.9375rem;
 	flex-direction: row;
 	@include Mixin.flex-alignement-center;
-	height: 3.9375rem;
 	box-shadow: $box-shadow;
 
 	a {
@@ -14,13 +14,13 @@ header {
 	}
 	.header__logo {
 		display: flex;
-		@include Mixin.flex-alignement-center;
 		height: 2.25rem;
+		@include Mixin.flex-alignement-center;
 		background: $color-white;
 
 		.logo__header {
-			width: 10.125rem;
 			height: 2.75rem;
+			width: 10.125rem;
 			padding: 0 1.19rem 0 1rem;
 		}
 	}
