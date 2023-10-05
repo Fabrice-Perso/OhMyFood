@@ -3,35 +3,40 @@
 // Footer styles
 footer {
 	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	background: $color-grey;
-	color: $color-white;
 	padding: 1.375rem 1.5625rem;
 	gap: 1rem;
+	flex-direction: column;
+	align-items: flex-start;
+	color: $color-white;
+	background: $color-grey;
 
 	h2 {
-		@include Mixin.font-size-footer-h2;
-		width: 8.6875rem;
 		height: 1.6875rem;
+		width: 8.6875rem;
+		@include Mixin.font-size-footer-h2;
 	}
 
-	.footer__lien {
+	.section__footer {
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 0.44rem;
 
-		a {
-			@include Mixin.font-size-footer-a;
-		}
+		.footer__lien {
+			display: flex;
+			margin-bottom: 0.44rem;
+			flex-direction: column;
 
-		i {
-			width: 0.6875rem;
-			height: 0.8125rem;
-			margin-right: 0.938rem;
+			a {
+				@include Mixin.font-size-footer-a;
+			}
 
-			.fa-solid {
-				color: $color-white;
+			i {
+				height: 0.8125rem;
+				width: 0.6875rem;
+				margin-right: 0.938rem;
+
+				.fa-solid {
+					color: $color-white;
+				}
 			}
 		}
 	}
@@ -41,24 +46,21 @@ footer {
 @media screen and (min-width: 1024px) {
 	/* Mettre en ligne au-delà de 1024px */
 	footer {
-		display: flex;
 		flex-direction: row-reverse;
 		justify-content: end;
 		align-items: center;
 
 		/* Styles pour la section__footer à l'intérieur du footer */
 		.section__footer {
-			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
 
 			/* Styles pour les éléments .footer__lien à l'intérieur de la section__footer */
 			.footer__lien {
-				display: flex;
+				margin-right: 1rem;
 				flex-direction: row;
 				align-items: center;
-				margin-right: 1rem;
 			}
 		}
 	}
