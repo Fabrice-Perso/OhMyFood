@@ -249,33 +249,3 @@ button {
 		}
 	}
 }
-/* Styles pour les écrans de bureau (1024px et plus) */
-@media screen and (min-width: 1024px) {
-	.section__fonctionnement {
-		margin: 0 11em;
-		height: 14.27rem;
-		.section__fonctionnement__etape {
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			grid-template-rows: auto;
-			margin: 0 0;
-			// flex-direction: row;
-			@include Mixin.flex-alignement-center;
-			.fonctionnement__etape {
-				width: 100%;
-			}
-		}
-	}
-	.section__restaurants {
-		padding: 0 11em;
-
-		.section__restaurants__cards {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-rows: auto;
-			gap: 3.12rem 6.25rem;
-			justify-content: center;
-			text-align: center;
-		}
-	}
-}
