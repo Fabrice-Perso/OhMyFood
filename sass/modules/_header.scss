@@ -16,7 +16,6 @@ header {
 		display: flex;
 		height: 2.25rem;
 		@include Mixin.flex-alignement-center;
-		background: $color-white;
 
 		.logo__header {
 			height: 2.75rem;

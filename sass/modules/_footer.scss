@@ -13,7 +13,7 @@ footer {
 	h2 {
 		height: 1.6875rem;
 		width: 8.6875rem;
-		@include Mixin.font-size-footer-h2;
+		@include Mixin.font-title-footer;
 	}
 
 	.section__footer {
