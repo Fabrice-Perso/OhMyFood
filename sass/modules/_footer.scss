@@ -43,7 +43,7 @@ footer {
 }
 
 /* Styles pour les écrans de bureau (1024px et plus) */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
 	/* Mettre en ligne au-delà de 1024px */
 	footer {
 		flex-direction: row-reverse;

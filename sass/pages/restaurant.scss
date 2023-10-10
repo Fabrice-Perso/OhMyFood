@@ -130,7 +130,7 @@
 
 	.section__bouton {
 		@include Mixin.animation-menu;
-		animation-delay: 2s;
+		animation-delay: 1s;
 	}
 
 	// *////////////////////////  Section Menu Contenu  ///////////////////////////////////
@@ -257,12 +257,15 @@
 	}
 }
 /* Styles pour les écrans de bureau (1024px et plus) */
-@media screen and (min-width: 1024px) {
-	.menu__restaurant {
-		margin: -1.563rem 10rem 0 10rem;
-		padding: 0.313rem 4.625rem;
-		.menu__title {
-			@include Mixin.flex-alignement-center;
+@media screen and (min-width: 768px) {
+		.menu__restaurant {
+			margin: -1.563rem 10rem 0 10rem;
+			padding: 0.313rem 4.625rem;
+			// width: 100%;
+			// justify-content: center;
+
+			.menu__title {
+				justify-content: center;
+			}
 		}
-	}
-}
+	 }
