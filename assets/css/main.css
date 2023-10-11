@@ -224,9 +224,12 @@ a {
   padding: 1.69rem 4.69rem;
 }
 
-button {
-  height: 3.125rem;
-  width: 13.625rem;
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.125rem;
+  width: 11.625rem;
   padding: 0.81rem 1.17rem;
   border: none;
   border-radius: 1.5625rem;
@@ -239,7 +242,7 @@ button {
   transition-duration: 0.4s;
   cursor: pointer;
 }
-button:hover {
+.button:hover {
   background: linear-gradient(0deg, #ff79da 0%, #9356dc 100%);
   background-color: #ff79da;
   box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.623);
