@@ -33,6 +33,7 @@
 	}
 }
 
+/* Animation d'apparition du menu par la gauche */
 @keyframes slideInFromLeft {
 	0% {
 		transform: translateX(-100%);
@@ -41,6 +42,7 @@
 		transform: translateX(0);
 	}
 }
+/* Animation d'apparition du menu par la droite*/
 @keyframes slideInFromRight {
 	0% {
 		transform: translateX(100%);
