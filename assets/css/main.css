@@ -347,7 +347,7 @@ a {
   align-items: center;
   height: 20px;
   width: 15px;
-  margin: 30px;
+  margin-left: 30px;
 }
 .section__fonctionnement .section__fonctionnement__etape .fonctionnement__etape .icon-etape {
   color: #7E7E7E;
