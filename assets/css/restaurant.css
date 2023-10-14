@@ -221,7 +221,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 1rem;
+  font-size: 0.98rem;
   font-weight: 700;
 }
 .menu__restaurant .menu__contenu__entree .button__choixcontenu .button__choixcontenu_anime .button__choixcontenu__info h4,
