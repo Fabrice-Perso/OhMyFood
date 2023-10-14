@@ -55,11 +55,11 @@
   opacity: 1;
 }
 .menu__restaurant .menu__contenu__entree {
-  animation: slideInFromRight 2s ease-in-out;
+  animation: slideInFromLeft 2s ease-in-out;
   animation-fill-mode: both;
 }
 .menu__restaurant .menu__contenu__entree > * {
-  animation: slideInFromRight 2s ease-in-out;
+  animation: slideInFromLeft 2s ease-in-out;
   animation-fill-mode: both;
 }
 .menu__restaurant .menu__contenu__entree > :nth-child(2) {
@@ -75,12 +75,12 @@
   animation-delay: 0.7s;
 }
 .menu__restaurant .menu__contenu__plat {
-  animation: slideInFromRight 2s ease-in-out;
+  animation: slideInFromLeft 2s ease-in-out;
   animation-fill-mode: both;
   animation-delay: 0.7s;
 }
 .menu__restaurant .menu__contenu__plat > * {
-  animation: slideInFromRight 2s ease-in-out;
+  animation: slideInFromLeft 2s ease-in-out;
   animation-fill-mode: both;
 }
 .menu__restaurant .menu__contenu__plat > :nth-child(2) {
@@ -96,12 +96,12 @@
   animation-delay: 0.7s;
 }
 .menu__restaurant .menu__contenu__dessert {
-  animation: slideInFromRight 2s ease-in-out;
+  animation: slideInFromLeft 2s ease-in-out;
   animation-fill-mode: both;
   animation-delay: 1.4s;
 }
 .menu__restaurant .menu__contenu__dessert > * {
-  animation: slideInFromRight 2s ease-in-out;
+  animation: slideInFromLeft 2s ease-in-out;
   animation-fill-mode: both;
 }
 .menu__restaurant .menu__contenu__dessert > :nth-child(2) {
@@ -117,7 +117,7 @@
   animation-delay: 0.7s;
 }
 .menu__restaurant .section__bouton {
-  animation: slideInFromRight 2s ease-in-out;
+  animation: slideInFromLeft 2s ease-in-out;
   animation-fill-mode: both;
   animation-delay: 1s;
 }
