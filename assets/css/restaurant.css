@@ -71,6 +71,9 @@
 .menu__restaurant .menu__contenu__entree > :nth-child(4) {
   animation-delay: 0.5s;
 }
+.menu__restaurant .menu__contenu__entree > :nth-child(5) {
+  animation-delay: 0.7s;
+}
 .menu__restaurant .menu__contenu__plat {
   animation: slideInFromRight 2s ease-in-out;
   animation-fill-mode: both;
@@ -89,6 +92,9 @@
 .menu__restaurant .menu__contenu__plat > :nth-child(4) {
   animation-delay: 0.5s;
 }
+.menu__restaurant .menu__contenu__plat > :nth-child(5) {
+  animation-delay: 0.7s;
+}
 .menu__restaurant .menu__contenu__dessert {
   animation: slideInFromRight 2s ease-in-out;
   animation-fill-mode: both;
@@ -106,6 +112,9 @@
 }
 .menu__restaurant .menu__contenu__dessert > :nth-child(4) {
   animation-delay: 0.5s;
+}
+.menu__restaurant .menu__contenu__dessert > :nth-child(5) {
+  animation-delay: 0.7s;
 }
 .menu__restaurant .section__bouton {
   animation: slideInFromRight 2s ease-in-out;
@@ -212,7 +221,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 .menu__restaurant .menu__contenu__entree .button__choixcontenu .button__choixcontenu_anime .button__choixcontenu__info h4,
@@ -223,7 +232,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 0.94019rem;
+  font-size: 0.75rem;
   font-weight: 300;
 }
 .menu__restaurant .menu__contenu__entree .button__choixcontenu .button__choixcontenu__check,

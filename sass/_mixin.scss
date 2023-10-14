@@ -1,91 +1,91 @@
 @use "_Variables.scss" as *;
 
 @mixin flex-alignement-center {
-	justify-content: center;
-	align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 @mixin font-title-choixmenu {
-	font-size: 1.5rem;
-	font-weight: 700;
-	margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
 }
 
 @mixin font-subtitle-choixmenu {
-	font-size: 1.125rem;
-	font-weight: 300;
+  font-size: 1.125rem;
+  font-weight: 300;
 }
 
 @mixin font-etape {
-	font-size: 1rem;
-	font-weight: 700;
-	margin-left: 1.64rem;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: 1.64rem;
 }
 @mixin font-span {
-	font-size: 0.88638rem;
-	font-weight: 500;
+  font-size: 0.88638rem;
+  font-weight: 500;
 }
 
 @mixin font-title-choixrestaurant {
-	font-size: 1.125rem;
-	font-weight: 800;
-	margin: 0;
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin: 0;
 }
 
 @mixin font-subtitle-choixrestaurant {
-	font-size: 1.0625rem;
-	font-weight: 300;
-	margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 300;
+  margin: 0;
 }
 @mixin font-size-badge {
-	line-height: 1.8125rem;
-	color: $color-badge;
-	font-weight: bold;
-	font-size: 0.875rem;
+  line-height: 1.8125rem;
+  color: $color-badge;
+  font-weight: bold;
+  font-size: 0.875rem;
 }
 
 @mixin font-title-footer {
-	margin: 0;
-	font-family: $font-titre;
-	font-size: 1.125rem;
-	font-weight: 500;
+  margin: 0;
+  font-family: $font-titre;
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 
 @mixin font-size-footer-a {
-	font-size: 1rem;
-	font-weight: 500;
+  font-size: 1rem;
+  font-weight: 500;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////
 @mixin font-title-menu {
-	font-family: $font-titre;
-	font-size: 1.75rem;
-	font-weight: 400;
+  font-family: $font-titre;
+  font-size: 1.75rem;
+  font-weight: 400;
 }
 @mixin font-subtitle-menu {
-	font-size: 1rem;
-	font-weight: 300;
+  font-size: 1rem;
+  font-weight: 300;
 }
 @mixin font-title-plat {
-	font-size: 1.125rem;
-	font-weight: 700;
+  font-size: 1rem;
+  font-weight: 700;
 }
 @mixin font-subtitle-plat {
-	font-size: 0.94019rem;
-	font-weight: 300;
+  font-size: 0.75rem;
+  font-weight: 300;
 }
 
 @mixin font-button {
-	font-size: 1rem;
-	font-weight: 500;
+  font-size: 1rem;
+  font-weight: 500;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////
 @mixin hover-ellispsis {
-	width: 100%; // on définit la dimension pour ellipsis fonctionne
-	margin: 0;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+  width: 100%; // on définit la dimension pour ellipsis fonctionne
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 // @mixin hover-effect {
@@ -95,6 +95,6 @@
 // }
 
 @mixin animation-menu {
-	animation: slideInFromRight 2s ease-in-out;
-	animation-fill-mode: both;
+  animation: slideInFromRight 2s ease-in-out;
+  animation-fill-mode: both;
 }
